@@ -8,13 +8,13 @@ use crate::handler::book::Book;
 use crate::handler::user::User;
 use crate::route::router_base::RouterBase;
 
+/// build router
 pub fn build_router() -> Router {
     let all_routers = Router::new()
         .route("/", get(handler))
         .nest(User::get_path(), User::get_routers())
         .nest(Book::get_path(), Book::get_routers())
-        .fallback(fallback.into_service())
-        ;
+        .fallback(fallback.into_service());
     all_routers
 }
 
