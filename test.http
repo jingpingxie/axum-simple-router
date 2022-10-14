@@ -1,0 +1,16 @@
+###未知路由
+GET http://127.0.0.1:3000/api/item?id=99
+Accept: application/json
+
+###根路由
+GET http://127.0.0.1:3000/
+Accept: application/json
+
+###登录
+POST /127.0.0.1:3000/user/login
+Content-Type: application/json
+
+{
+  "username": "18532653344",
+  "password": "test"
+}
